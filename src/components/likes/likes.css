@@ -1,0 +1,41 @@
+.likes {
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background-color: hsl(var(--clr-primary-light-grayish-blue), 0.15);
+}
+:is(.plus, .minus),
+:is(.plus, .minus):hover > button > section {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:is(.plus, .minus) > button {
+  padding: 0.5rem;
+}
+
+:is(.plus, .minus):hover {
+  cursor: pointer;
+}
+
+:is(.plus, .minus):hover > button > section > svg > path {
+  fill: hsl(var(--clr-primary-moderate-blue));
+}
+
+.score {
+  color: hsl(var(--clr-primary-moderate-blue));
+  font-weight: 500;
+  width: 25px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .likes{
+    order: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  :is(.plus, .minus) > button {
+    padding: 0.5rem 0;
+  }
+}

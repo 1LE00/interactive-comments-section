@@ -1,0 +1,113 @@
+.App {
+  justify-content: center;
+  padding: 2rem var(--padding-inline);
+  gap: 1rem;
+  max-width: 815px;
+  margin-inline: auto;
+}
+
+.individual-comment, .reply-to, .reply-actions {
+  gap: 1rem;
+}
+
+.replies {
+  --margin-inline-start: 1rem;
+  width: calc(100% - var(--margin-inline-start));
+  gap: 1rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid hsl(var(--clr-neutral-grayish-blue), 0.1);
+}
+
+.avatar {
+  width: 32px;
+  aspect-ratio: 1;
+}
+
+section:is(.post, .reply) {
+  background-color: hsl(var(--clr-white));
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+section:is(.post, .reply) > form {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+section:is(.post, .reply) > form > .form-content {
+  line-height: 1;
+}
+
+section:is(.post, .reply) > form > .reply-actions > .btn-to-publish > button,
+section:is(.post, .reply) > form > .btn-to-publish > button {
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-primary-moderate-blue));
+  transition: background-color 0.25s ease-out;
+}
+
+section:is(.post, .reply) > form > .reply-actions > .btn-to-publish > button:hover,
+section:is(.post, .reply) > form > .btn-to-publish > button:hover{
+  background-color: hsl(var(--clr-primary-moderate-blue),0.75);
+}
+
+section:is(.post, .reply) > form > .reply-actions > .btn-to-publish > button {
+  font-size: var(--fs-100);
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  :root {
+    --padding-inline: 2rem;
+  }
+
+  .replies-replies-section {
+    padding-inline-start: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    gap: 1.5rem;
+    padding: 5rem var(--padding-inline);
+  }
+
+  .individual-comment {
+    gap: 1.5rem;
+  }
+
+  .replies {
+    --margin-inline-start: 3.09375rem;
+    gap: 1.5rem;
+    width: calc(100% - var(--margin-inline-start));
+    margin-inline-start: var(--margin-inline-start);
+    padding-inline-start: 2.9rem;
+  }
+
+  section:is(.post, .reply) {
+    padding: 1.5rem 2rem;
+  }
+
+  section:is(.post, .reply) > form {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  section:is(.post, .reply) > form > .form-content {
+    order: 2;
+  }
+
+  section:is(.post, .reply) > form > .avatar {
+    order: 1;
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-to-publish, .reply-actions {
+    order: 3;
+  }
+}

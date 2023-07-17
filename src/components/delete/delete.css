@@ -1,0 +1,68 @@
+.sect-delete {
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  background-color: hsl(var(--clr-black), 0.65);
+}
+
+.delete-content {
+  width: calc(100vw - 2 * var(--padding-inline));
+  padding: 1.75rem;
+  border-radius: 8px;
+  gap: 1rem;
+  align-items: flex-start;
+  background-color: hsl(var(--clr-white));
+  max-width: 356px;
+}
+
+.del-title {
+  color: hsl(var(--clr-neutral-dark-blue));
+}
+
+.actions {
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.actions > section {
+  border-radius: 8px;
+  flex-grow: 2;
+}
+
+.actions > section > button {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-200);
+  font-weight: 500;
+  color: hsl(var(--clr-white));
+}
+
+.btn-cancel {
+  background-color: hsl(var(--clr-neutral-grayish-blue));
+}
+
+.btn-delete {
+  background-color: hsl(var(--clr-primary-soft-red));
+}
+
+.btn-cancel:hover {
+  background-color: hsl(var(--clr-neutral-grayish-blue), 0.75);
+}
+
+.btn-delete:hover {
+  background-color: hsl(var(--clr-primary-soft-red), 0.75);
+}
+
+.btn-ok {
+  background-color: hsl(var(--clr-primary-moderate-blue));
+}
+
+.btn-ok:hover {
+  background-color: hsl(var(--clr-primary-moderate-blue), 0.75);
+}
+
+@media screen and (min-width: 768px) {
+  .delete-content {
+    max-width: 392px;
+  }
+}

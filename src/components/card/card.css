@@ -1,0 +1,144 @@
+.card {
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.15rem;
+  position: relative;
+  border-radius: 8px;
+  justify-content: space-between;
+  background-color: hsl(var(--clr-white));
+}
+
+.card-content {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.card-header {
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.avatar-info {
+  gap: 0.5rem;
+}
+
+.avatar-username {
+  font-weight: 500;
+  color: hsl(var(--clr-neutral-dark-blue));
+}
+
+.attribute {
+  font-size: var(--fs-100);
+  font-weight: 500;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-primary-moderate-blue));
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.created-at {
+  font-size: var(--fs-200);
+}
+
+.edited{
+  font-size: var(--fs-300);
+  font-weight: 500;
+  color: hsl(var(--clr-primary-moderate-blue));
+}
+
+.card-article > textarea {
+  min-height: 150px;
+}
+
+.replying-to {
+  font-weight: 500;
+  color: hsl(var(--clr-primary-moderate-blue));
+}
+
+.card-actions {
+  gap: 1rem;
+}
+
+.card > button,
+.card-actions > button {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1;
+  font-weight: 500;
+  align-items: flex-end;
+  color: hsl(var(--clr-primary-moderate-blue));
+}
+
+button.btn-delete-initiator {
+  color: hsl(var(--clr-primary-soft-red));
+}
+
+button.btn-cancel-update {
+  color: hsl(var(--clr-primary-soft-red));
+}
+
+button.btn-delete-initiator:hover {
+  color: hsl(var(--clr-primary-soft-red), 0.75) !important;
+}
+
+@media screen and (min-width: 375px) {
+  .created-at {
+    font-size: var(--fs-400);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    gap: 1.5rem;
+  }
+
+  .avatar-info {
+    margin-inline-end: 0.5rem;
+  }
+
+  .card-actions {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    gap: 1.75rem;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .card-content {
+    order: 2;
+  }
+
+  .edited{
+    display: none;
+  }
+
+  .card > button:hover,
+  .card-actions > button:hover {
+    color: currentColor;
+    opacity: 0.75;
+  }
+
+  .card-actions,
+  .btn-reply-initiator {
+    order: 3;
+    position: absolute;
+    top: 2rem;
+    right: 1.75rem;
+  }
+
+  .card-article .content {
+    padding-inline-end: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .edited{
+    display: block;
+  }
+}

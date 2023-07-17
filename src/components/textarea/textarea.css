@@ -1,0 +1,29 @@
+textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    line-height: initial;
+    resize: vertical;
+    color: hsl(var(--clr-neutral-dark-blue));
+    background-color: hsl(var(--clr-white));
+    border: 2px solid hsl(var(--clr-neutral-grayish-blue), 0.25);
+    transition: border-color 0.25s ease-in;
+}
+
+textarea::placeholder{
+    color: hsl(var(--clr-neutral-grayish-blue));
+    transition: font-size 0.25s ease-in;
+}
+
+textarea:is(:hover, :focus-within){
+    border-color: hsl(var(--clr-primary-moderate-blue));
+}
+
+textarea:focus-within::placeholder{
+    font-size: var(--fs-100);
+}
+
+textarea::-webkit-scrollbar{
+    width: 0;
+}
