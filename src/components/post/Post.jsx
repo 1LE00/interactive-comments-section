@@ -21,7 +21,7 @@ const Post = ({ currentUser, api, counter, setComments }) => {
         const counterResult = await counterResponse.json();
         // generate postObject
         const postObject = {
-            id: counterResult.id + 1,
+            id: (counterResult.id + 1).toString(),
             content: textareaValue,
             createdAt: new Date().toISOString(),
             score: 0,
