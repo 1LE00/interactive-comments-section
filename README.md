@@ -29,6 +29,9 @@ Users should be able to:
 
 ### Links
 - This project was built using json-server to fetch json files. Use the following syntax to start json-server
+  ```bash
+  npx json-server --w data/data.json --p 3500
+  ```
 - npx json-server --w data/data.json --p 3500
 - If you wish to change the port other than 3500, make sure to change it in App.js as well.
 - Solution URL: [https://github.com/1LE00/interactive-comments-section]
